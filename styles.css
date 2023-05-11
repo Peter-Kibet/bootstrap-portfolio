@@ -1,0 +1,66 @@
+.about-img-container {
+    perspective: 1000px;
+}
+
+.about-img {
+    transition: transform 0.5s ease-out;
+}
+
+.about-img:hover {
+    animation: wobble 0.5s ease-in-out infinite;
+}
+
+@keyframes wobble {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    15% {
+        transform: rotateZ(-5deg);
+    }
+
+    30% {
+        transform: rotateZ(3deg);
+    }
+
+    45% {
+        transform: rotateZ(-3deg);
+    }
+
+    60% {
+        transform: rotateZ(2deg);
+    }
+
+    75% {
+        transform: rotateZ(-1deg);
+    }
+
+    100% {
+        transform: rotateZ(0deg);
+    }
+}
+.about-img-container {
+    perspective: 1000px;
+    position: relative;
+}
+
+.about-img {
+    transition: transform 0.5s ease-out;
+}
+
+.about-img:hover {
+    transform: rotateY(360deg) scale(1.2);
+}
+
+.about-img-container::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    box-shadow: 0 0 10px 5px #00a2ff;
+    border-radius: 50%;
+}
+
