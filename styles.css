@@ -1,0 +1,49 @@
+.head-text {
+  height: 100vh;
+  background-image: url(./assets/home-bg-desktop.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about-img-container {
+  perspective: 1000px;
+}
+
+.about-img {
+  transition: transform 0.5s ease-out;
+}
+
+.about-img:hover {
+  animation: wobble 0.5s ease-in-out infinite;
+}
+
+@keyframes wobble {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  15% {
+    transform: rotateZ(-5deg);
+  }
+
+  30% {
+    transform: rotateZ(3deg);
+  }
+
+  45% {
+    transform: rotateZ(-3deg);
+  }
+
+  60% {
+    transform: rotateZ(2deg);
+  }
+
+  75% {
+    transform: rotateZ(-1deg);
+  }
+
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
